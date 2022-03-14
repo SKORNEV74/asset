@@ -1,13 +1,18 @@
 @font-face {
     font-family: TTNorms;
-    src: url(../fonts/TTNorms-Light.ttf);
+    src: url("../fonts/TTNorms-Light.ttf");
+}
+@font-face {
+    font-family: PFRegalDisplayPro-BoldItalic;
+    src: url("../fonts/PFRegalDisplayPro-BoldItalic.ttf");
 }
 
 body,html {
     margin: 0;
     background-color: white;
-    font-family: TTNorms;
+    font-family: TTNorms, serif;
     color: #21242E;
+    overflow-x:hidden;
 }
 header {
     border-bottom: 1px solid #e4e4e4;
@@ -50,19 +55,31 @@ footer h3 {
 footer a {
     color: rgba(255, 255, 255, 0.8);
 }
+footer a:hover {
+    color: rgba(255, 255, 255, 0.56);
+    opacity: 0.56;
+}
 footer section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 footer section:last-child {
     border-bottom: none;
 }
+.footer-item:hover h3 {
+    color: #D0BC7A;
+}
 ul {
     list-style-type: none;
-    padding-inline-start: 0px;
+    padding-inline-start: 0;
 }
-a {
+a,.nav-link {
     color: #21242E;
+    opacity: 0.56;
     text-decoration: none;
+}
+a:hover,.nav-link:hover {
+    color: #21242E;
+    opacity: 1;
 }
 .h-32 {
     height: 32px;
@@ -95,6 +112,9 @@ a {
 }
 .fs-24 {
     font-size: 24px;
+}
+.fs-18 {
+    font-size: 18px;
 }
 .fs-16 {
     font-size: 16px;
@@ -141,4 +161,92 @@ h1 {
 .btn {
     padding: 16px 32px;
     border-radius: 4px;
+    border: none;
+}
+.btn:hover {
+     background-color: #D0BC7A;
+ }
+.trends {
+    padding: 112px 0;
+}
+h2 span {
+    color: #D0BC7A;
+}
+h1,h2,h3 {
+    font-weight: bold;
+}
+.bg-sale {
+    background: #EB5757;
+    position: absolute;
+    border-radius: 100px;
+    margin-top: 24px;
+    margin-left: 24px;
+    padding: 5px 10px;
+}
+.mr-32 {
+    margin-right: 32px;
+}
+.allTrends {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0;
+}
+.card {
+    scroll-snap-align: start;
+    min-width: 256px;
+    padding: 0;
+    background: #F7F7F7;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+.card:hover {
+    border: 1px solid rgba(33, 36, 46, 0.4);
+}
+.card:hover h5 {
+    color: #D0BC7A;
+}
+.size-256 {
+    width: 256px;
+    height: 256px;
+    background-image: url("../images/image 24.png");
+    background-position: center;
+}
+.image-like {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+.border-first {
+    border-top: 12px solid #c08d74;
+}
+.border-second {
+    border-top: 12px solid #ea976f;
+}
+.border-third {
+    border-top: 12px solid #c07474;
+}
+.card-title,.cost {
+    font-family: PFRegalDisplayPro-BoldItalic, serif;
+}
+.card-body {
+    padding: 24px;
+}
+.mb-8 {
+    margin-bottom: 8px;
+}
+.mb-16 {
+    margin-bottom: 16px;
+}
+p.fs-14 {
+    color: rgba(33, 36, 46, 0.8);
+}
+.cost span {
+    text-decoration: line-through;
+    color: rgba(33, 36, 46, 0.4);
+}
+.cedro-image {
+    width: 11px;
+    height: 11px;
+    margin: -5px 0 0 5px;
 }
